@@ -1,0 +1,69 @@
+.headerWrapper{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius:  0px  0px 15px 15px ;
+
+    ul{
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li{
+            width: max-content;
+            list-style-type: none;
+            gap: 10px;
+            cursor: pointer;
+            color: black;
+
+        transition-property: color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 10ms
+        }
+    }
+}
+
+.headerWrapper .show{
+    position: fixed;
+}
+
+.headerWrapper ul li:hover{
+    color: #0F235E;
+}
+
+.innerWrapper{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .contactBtn{
+        padding: 10px 15px;
+        background: none;
+        border-radius: 50px;
+        border: 2px solid #0F235E;
+        color: #0F235E;
+        cursor: pointer;
+
+
+        transition-property: background, color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 10ms;
+    }
+}
+
+.contactBtn:hover{
+    background: #0F235E;
+    color: white;
+}
+
+.Headerlogo{
+    width: 150px;
+}
