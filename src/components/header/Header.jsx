@@ -1,42 +1,34 @@
-
-import { useEffect, useState } from "react"
-import "./header.css"
-import logo from "../../assets/voicely logo 2 PNG.png"
+import { useEffect, useState } from "react";
+import "./header.css";
+import logo from "../../assets/voicely logo 2 PNG.png";
 
 const Header = () => {
-  const [scroll, setScroll] = useState(false)
+  const [scroll, setScroll] = useState(false);
 
-
-  useEffect(()=>{
-    const handleScroll = () =>{
-      const currentScroll = window.scrollY;
-
-      if(currentScroll > 100){
-        setScroll(true)
-      }else{
-        setScroll(false)
-      }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [])
-
+  }, []);
 
   return (
-    <main className={`headerWrapper ${scroll? "show" : ""}`}>
+    <header className={`headerWrapper ${scroll ? "show" : ""}`}>
       <div className="innerWrapper">
-        <img src={logo} className="Headerlogo" />
+        <img src={logo} alt="Voicely logo" className="Headerlogo" />
+
         <ul>
-          <li>SERVICES</li>
-          <li>ABOUT US</li>
-          <li>CONTACT US</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
         </ul>
 
-        <button className='contactBtn'>+234 811 079 061 5</button>
+        <button className="contactBtn">+234 811 079 0615</button>
       </div>
-    </main>
-  )
-}
+    </header>
+  );
+};
 
-export default Header
+export default Header;

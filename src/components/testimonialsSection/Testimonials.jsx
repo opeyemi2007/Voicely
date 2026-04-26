@@ -1,35 +1,77 @@
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "../../animations";
+import "./testimonials.css";
+
 const Testimonials = () => {
   return (
     <section className="section dark-bg">
-      <div className="testimonial-container">
+      <motion.div
+        className="testimonial-container"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
 
-        <h2 className="light-text">
-          CLIENT <span>SUCCESS STORIES</span>
-        </h2>
+        {/* HEADER */}
+        <motion.div variants={fadeUp} className="testimonial-header">
+          <span className="tag">TESTIMONIALS</span>
+          <h2>
+            Client <span>Success Stories</span>
+          </h2>
+        </motion.div>
 
+        {/* GRID */}
         <div className="testimonial-grid">
 
-          <div className="testimonial active">
+          {/* FEATURED */}
+          <motion.div variants={fadeUp} className="testimonial featured">
             <p>
-              Working with Voicely improved our customer response time drastically.
+              “Voicely completely transformed how we handle customer support.
+              Our response time improved by over 60%.”
             </p>
-          </div>
 
-          <div className="testimonial">
-            <p>
-              Their support system helped us scale faster than expected.
-            </p>
-          </div>
+            <div className="client">
+              <div className="avatar"></div>
+              <div>
+                <h4>Daniel Okafor</h4>
+                <span>E-commerce Founder</span>
+              </div>
+            </div>
+          </motion.div>
 
-          <div className="testimonial">
+          {/* NORMAL */}
+          <motion.div variants={fadeUp} className="testimonial">
             <p>
-              Reliable, fast, and professional team handling our support.
+              “Their team is reliable, fast, and understands our customers.”
             </p>
-          </div>
+
+            <div className="client">
+              <div className="avatar"></div>
+              <div>
+                <h4>Sarah Ade</h4>
+                <span>Startup Owner</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="testimonial">
+            <p>
+              “We scaled support without hiring in-house. Huge win for us.”
+            </p>
+
+            <div className="client">
+              <div className="avatar"></div>
+              <div>
+                <h4>Michael Bello</h4>
+                <span>SaaS Founder</span>
+              </div>
+            </div>
+          </motion.div>
 
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

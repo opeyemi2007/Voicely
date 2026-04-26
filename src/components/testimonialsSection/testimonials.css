@@ -1,0 +1,91 @@
+/* HEADER */
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonial-header .tag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #6ea8ff;
+}
+
+.testimonial-header h2 {
+  color: white;
+  font-size: 36px;
+}
+
+.testimonial-header span {
+  color: #2f6bff;
+}
+
+/* GRID */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 25px;
+}
+
+/* CARD */
+.testimonial {
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.3s;
+}
+
+.testimonial:hover {
+  transform: translateY(-8px);
+}
+
+/* FEATURED CARD */
+.testimonial.featured {
+  background: linear-gradient(180deg, #1e5eff, #003cff);
+  border: none;
+}
+
+/* TEXT */
+.testimonial p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* CLIENT */
+.client {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #c1d4ff;
+}
+
+/* NAME */
+.client h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ROLE */
+.client span {
+  font-size: 12px;
+  color: #c1d4ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}

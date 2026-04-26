@@ -1,0 +1,108 @@
+/* HEADER */
+.services-header {
+  margin-bottom: 50px;
+}
+
+.services-header .tag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #6ea8ff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.services-header h2 {
+  font-size: 36px;
+  color: white;
+}
+
+.services-header span {
+  color: #2f6bff;
+}
+
+/* LIST */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* SERVICE ITEM */
+.service {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s;
+}
+
+.service:hover {
+  transform: translateX(6px);
+}
+
+/* LEFT SIDE */
+.service-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.service-left span {
+  font-size: 14px;
+  color: #6ea8ff;
+}
+
+.service-left h3 {
+  font-size: 18px;
+  color: white;
+}
+
+/* TEXT */
+.service p {
+  max-width: 420px;
+  font-size: 15px;
+  color: #c1d4ff;
+}
+
+/* CTA */
+.cta-bar {
+  margin-top: 50px;
+  background: linear-gradient(90deg, #1e5eff, #003cff);
+  padding: 22px 30px;
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-bar p {
+  color: white;
+  font-weight: 500;
+}
+
+.cta-bar button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

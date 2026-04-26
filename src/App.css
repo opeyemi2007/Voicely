@@ -1,12 +1,29 @@
 @font-face {
   font-family: 'TT Supermolot Neue';
-  src: url('../src/assets/fonts/tt-supermolot-neue-trl.bd.woff2') format('woff2'),
-  url('../src/assets/fonts/tt-supermolot-neue-trl.db.woff2') format('woff2'),
-  url('../src/assets/fonts/tt-supermolot-neue-trl.th.woff2') format('woff2'),
-  url('../src/assets/fonts/tt-supermolot-neue-trl.xbd.woff2') format('woff2');
+  src: url('../src/assets/fonts/tt-supermolot-neue-trl.bd.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'TT Supermolot Neue small';
+  src: url('../src/assets/fonts/tt-supermolot-neue-trl.db.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Supermolot Neue tiny';
+  src: url('../src/assets/fonts/tt-supermolot-neue-trl.th.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Supermolot Neue big';
+  src: url('../src/assets/fonts/tt-supermolot-neue-trl.xbd.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 body{
     margin: 0;
