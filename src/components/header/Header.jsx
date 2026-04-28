@@ -3,6 +3,8 @@ import "./header.css";
 import logo from "../../assets/voicely logo 2 PNG.png";
 import { useNavigate } from "react-router-dom";
 import { HiMenuAlt2, HiMenuAlt3 } from "react-icons/hi";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
@@ -41,12 +43,22 @@ const Header = () => {
 
             <div className="navlink">
               <ul>
-                <li>Services</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li onClick={()=> nav("/services")}>Services</li>
+                <li onClick={()=> nav("/about")}>About</li>
+                <li onClick={()=> nav("/contact")}>Contact</li>
               </ul>
             </div>
 
+            <div className="socialsWrapper">
+              <FaFacebook />
+              <FaInstagram />
+              <FaTiktok />
+              <FaXTwitter />
+            </div>
+
+            <div className="footer">
+              <span>&a;</span>
+            </div>
           </div>
         </div>
       }

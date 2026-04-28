@@ -31,13 +31,13 @@
 }
 
 /* SOCIALS */
-.socials {
+.socialsWrapper, .socials {
   display: flex;
   gap: 15px;
   font-size: 22px;
 }
 
-.socials svg {
+.socialsWrapper svg, .socials svg {
   background: #f1f5ff;
   padding: 10px;
   border-radius: 50%;
@@ -45,7 +45,7 @@
   transition: 0.3s;
 }
 
-.socials svg:hover {
+.socialsWrapper svg:hover, .socials svg:hover {
   background: linear-gradient(#0F235E, #17389C);
   color: white;
 }
