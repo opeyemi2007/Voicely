@@ -8,11 +8,15 @@ import member3 from "../../assets/member3.jpeg";
 import member4 from "../../assets/member4.jpeg";
 import member5 from "../../assets/member5.jpg";
 import member6 from "../../assets/Gemini_Generated_Image_o16uodo16uodo16u.png";
+import member7 from "../../assets/member5.jpeg";
+import member8 from "../../assets/member6.jpeg";
+import member9 from "../../assets/member7.jpeg";
+
 
 const team = [
   {
     name: "Aliu Samson Chibuzor",
-    role: "Founder & Creative Director",
+    role: "Founder/CEO",
     image: member1,
   },
   {
@@ -36,10 +40,25 @@ const team = [
     image: member5,
   },
   {
+    name: "Okon Abraham Nkoh",
+    role: "Complaints and escalation specialist",
+    image: member7,
+  },
+  {
+    name: "Bello Oluwadamilare Matthew",
+    role: "social media and online community manager",
+    image: member8,
+  },
+  {
+    name: "Emmanuel Okoye",
+    role: "Technical support specialist",
+    image: member9,
+  },
+  {
     name: "Voicely Assistant",
     role: "Always active. Always helping. 💬",
     image: member6,
-  },
+  }
 ];
 
 const Team = () => {
@@ -73,7 +92,7 @@ const Team = () => {
               className="team-card"
             >
               <div className="image-wrapper">
-                <img src={member.image} alt={member.name} />
+                <img src={member.image} alt={member.name} loading="lazy"/>
               </div>
 
               <div className="team-info">

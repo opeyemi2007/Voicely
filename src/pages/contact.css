@@ -1,0 +1,112 @@
+/* PAGE */
+.contact-page {
+  background: #eef2f7;
+}
+
+/* HERO */
+.contact-hero h1 {
+  font-size: 46px;
+  color: #0a2540;
+}
+
+.contact-hero span {
+  color: #2f6bff;
+}
+
+.contact-hero p {
+  margin-top: 15px;
+  max-width: 600px;
+  color: #5a6b85;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+}
+
+/* FORM */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(#0F235E, #17389C);
+  color: white;
+  cursor: pointer;
+}
+
+/* INFO */
+.contact-info {
+  padding: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #0a2540;
+}
+
+/* CARD */
+.contact-card {
+  margin-top: 20px;
+  background: #f9fbff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.contact-card ul {
+  padding: 0;
+  list-style: none;
+}
+
+.contact-card li {
+  margin: 8px 0;
+}
+
+/* CTA */
+.contact-cta {
+  text-align: center;
+}
+
+.contact-cta button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(#0F235E, #17389C);
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+}

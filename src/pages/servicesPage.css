@@ -1,0 +1,104 @@
+/* PAGE */
+.services-page {
+  background: #eef2f7;
+}
+
+/* HERO */
+.services-hero h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  color: #0a2540;
+}
+
+.services-hero span {
+  color: #2f6bff;
+}
+
+.services-hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: #5a6b85;
+}
+
+/* SERVICES LIST */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* SERVICE BLOCK */
+.service-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* LEFT */
+.service-left span {
+  color: #2f6bff;
+}
+
+.service-left h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+/* RIGHT */
+.service-right p {
+  margin-bottom: 15px;
+  color: #5a6b85;
+}
+
+.service-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-right li {
+  margin-bottom: 8px;
+}
+
+/* WHY US */
+.why-us h2 {
+  margin-bottom: 30px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CTA */
+.services-cta {
+  text-align: center;
+}
+
+.services-cta button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(#0F235E, #17389C);
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-block {
+    flex-direction: column;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-hero h1 {
+    font-size: 32px;
+  }
+}

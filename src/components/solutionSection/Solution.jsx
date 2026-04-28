@@ -44,7 +44,7 @@ const Solution = () => {
           viewport={{ once: true }}
         >
           <div className="visual-card">
-            <img src={illustration} alt="Voicely assistant" />
+            <img src={illustration} alt="Voicely assistant" loading="lazy" />
 
             {/* floating UI elements */}
             <div className="bubble one">💬 New Message</div>

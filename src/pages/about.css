@@ -1,0 +1,95 @@
+/* PAGE */
+.about-page {
+  background: #eef2f7;
+}
+
+/* HERO */
+.about-hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #0a2540;
+}
+
+.about-hero span {
+  color: #2f6bff;
+}
+
+.about-hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: #5a6b85;
+}
+
+/* STORY */
+.about-story {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+}
+
+.story-highlight {
+  background: linear-gradient(180deg, #0a2540, #1e5eff);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* MISSION */
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mission-card {
+  background: #f9fbff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* FEATURES */
+.about-features h2 {
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+}
+
+.about-cta button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(#0F235E, #17389C);
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

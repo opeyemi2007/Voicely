@@ -8,7 +8,8 @@
   justify-content: center;
 
   position: fixed;
-  top: -100px; /* hidden initially */
+  top: -100px;
+  /* hidden initially */
   left: 0;
 
   background: rgba(255, 255, 255, 0.719);
@@ -42,15 +43,16 @@
 /* LOGO */
 .Headerlogo {
   width: 140px;
+  cursor: pointer;
 }
 
 /* NAV */
-ul {
+.innerWrapper ul {
   display: flex;
   gap: 30px;
 }
 
-ul li {
+.innerWrapper ul li {
   list-style: none;
   cursor: pointer;
   color: #0a2540;
@@ -90,15 +92,96 @@ ul li:hover::after {
   transition: all 0.3s ease;
 }
 
+.mobileMenu {
+  display: none;
+}
+
 .contactBtn:hover {
   background: #0F235E;
   color: white;
   transform: translateY(-2px);
 }
 
+
+.headerDropdown {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  border-radius: 0px 0px 20px 20px;
+  background: rgba(255, 255, 255, 0.826);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  top: 0;
+  display: none;
+  opacity: 0;
+}
+
+
+
 /* MOBILE */
 @media (max-width: 768px) {
-  ul {
+  .innerWrapper ul {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .headerDropdown {
+    display: block;
+    opacity: 1;
+  }
+
+
+  .headerDropdowninnerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+  }
+
+  .headerDropdowninnerWrapper .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .navlink{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navlink ul{
+    width: 90%;
+    padding: 0;
+  }
+
+  .navlink ul li{
+    font-size: 30px;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #0F235E;
+    background: whitesmoke;
+  }
+
+  .navlink ul li:hover{
+    background-color: #0F235E;
+    padding: 10px 0px 10px 10px;
+    color: white;
+  }
+
+  .contactBtn {
     display: none;
   }
 }

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../../animations";
-import character from "../../assets/model 2.png"
 import "./problem.css";
 
 const Problem = () => {
@@ -40,17 +39,6 @@ const Problem = () => {
             </motion.div>
           </div>
         </motion.div>
-
-        {/* RIGHT CHARACTER */}
-        {/* <motion.div
-          className="problem-right"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <img src={character} alt="Voicely assistant" />
-        </motion.div> */}
 
       </div>
     </section>
