@@ -8,7 +8,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-  const [headerDropDown, setHeaderDropDown] = useState(true)
+  const [open, setOpen] = useState(false);
+  const nav = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,49 +20,66 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const nav = useNavigate()
+  // 🔥 Lock scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
 
   return (
     <header className={`headerWrapper ${scroll ? "show" : ""}`}>
+
       <div className="innerWrapper">
-        <img src={logo} alt="Voicely logo" className="Headerlogo" loading="lazy" onClick={() => nav("/")} />
+        <img
+          src={logo}
+          alt="Voicely logo"
+          className="Headerlogo"
+          onClick={() => nav("/")}
+        />
 
         <ul>
-          <li onClick={() => nav('/services')}>Services</li>
-          <li onClick={() => nav('/about')}>About</li>
+          <li onClick={() => nav("/services")}>Services</li>
+          <li onClick={() => nav("/about")}>About</li>
           <li onClick={() => nav("/contact")}>Contact</li>
         </ul>
 
-        <button className="contactBtn">+234 811 079 0615</button>
-        <HiMenuAlt3 className="mobileMenu" onClick={() => setHeaderDropDown(!headerDropDown)} />
+        <button className="contactBtn" onClick={() => nav("/contact")}>
+          Get Started
+        </button>
+
+        <HiMenuAlt3 className="mobileMenu" onClick={() => setOpen(true)} />
       </div>
 
-      {
-        headerDropDown && <div className="headerDropdown" onClick={() => setHeaderDropDown(!headerDropDown)}>
-          <div className="headerDropdowninnerWrapper">
-            <div className="header"><h1>MENU</h1><HiMenuAlt2 className="mobileMenu" /></div>
+      {/* MOBILE MENU */}
+      <div className={`headerDropdown ${open ? "active" : ""}`}>
+        <div
+          className="headerDropdowninnerWrapper"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="header">
+            <h1>MENU</h1>
+            <HiMenuAlt2 className="mobileMenu" onClick={() => setOpen(false)} />
+          </div>
 
-            <div className="navlink">
-              <ul>
-                <li onClick={()=> nav("/services")}>Services</li>
-                <li onClick={()=> nav("/about")}>About</li>
-                <li onClick={()=> nav("/contact")}>Contact</li>
-              </ul>
-            </div>
+          <div className="navlink">
+            <ul>
+              <li onClick={() => { nav("/services"); setOpen(false); }}>Services</li>
+              <li onClick={() => { nav("/about"); setOpen(false); }}>About</li>
+              <li onClick={() => { nav("/contact"); setOpen(false); }}>Contact</li>
+            </ul>
+          </div>
 
-            <div className="socialsWrapper">
-              <FaFacebook />
-              <FaInstagram />
-              <FaTiktok />
-              <FaXTwitter />
-            </div>
+          <div className="socialsWrapper">
+            <FaFacebook />
+            <FaInstagram />
+            <FaTiktok />
+            <FaXTwitter />
+          </div>
 
-            <div className="footer">
-              <span>&a;</span>
-            </div>
+          <div className="dropDownfooter">
+            <span>© Voicely 2026</span>
           </div>
         </div>
-      }
+      </div>
 
     </header>
   );
